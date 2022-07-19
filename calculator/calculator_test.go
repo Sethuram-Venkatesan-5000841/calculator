@@ -68,4 +68,23 @@ func TestSubtract(t *testing.T) {
 		calculator.Subtract(0)
 		assert.Equal(t, 0.0, calculator.result)
 	})
+
+	t.Run("should return -5.0 for number 5.0 when the result is 0.0", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Subtract(5)
+		assert.Equal(t, -5.0, calculator.result)
+	})
+
+	t.Run("should return 5.0 for number -5.0 when the result is 0.0", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Subtract(-5)
+		assert.Equal(t, 5.0, calculator.result)
+	})
+
+	t.Run("should return 6.5 for number 3.5 when the result is 10.0", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Add(10)
+		calculator.Subtract(3.5)
+		assert.Equal(t, 6.5, calculator.result)
+	})
 }
