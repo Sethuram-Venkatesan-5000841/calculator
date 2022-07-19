@@ -95,4 +95,39 @@ func TestMultiply(t *testing.T) {
 		calculator.Multiply(0)
 		assert.Equal(t, 0.0, calculator.result)
 	})
+
+	t.Run("should return 10.0 for number 5.0 when the result is 2.0", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Add(2)
+		calculator.Multiply(5)
+		assert.Equal(t, 10.0, calculator.result)
+	})
+
+	t.Run("should return -10.0 for number -5.0 when the result is 2.0", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Add(2)
+		calculator.Multiply(-5)
+		assert.Equal(t, -10.0, calculator.result)
+	})
+
+	t.Run("should return 10.0 for number -5.0 when the result is -2.0", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Add(-2)
+		calculator.Multiply(-5)
+		assert.Equal(t, 10.0, calculator.result)
+	})
+
+	t.Run("should return 7.0 for number 2.0 when the result is 3.5", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Add(3.5)
+		calculator.Multiply(2.0)
+		assert.Equal(t, 7.0, calculator.result)
+	})
+
+	t.Run("should return -7.0 for number -2 when the result is 3.5", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Add(3.5)
+		calculator.Multiply(-2)
+		assert.Equal(t, -7.0, calculator.result)
+	})
 }
