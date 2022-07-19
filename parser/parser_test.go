@@ -10,3 +10,12 @@ func TestNewParser(t *testing.T) {
 		assert.IsType(t, Parser{}, NewParser())
 	})
 }
+
+func TestParser(t *testing.T) {
+	t.Run("when parsing the string should not be empty", func(t *testing.T) {
+		assert.Panics(t, func() {
+			parser := NewParser()
+			parser.Parse("")
+		})
+	})
+}
