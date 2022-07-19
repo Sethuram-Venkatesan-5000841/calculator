@@ -24,4 +24,5 @@ func (calculator *Calculator) Divide(number float64) {
 	if number == 0 {
 		panic("Cannot divide by 0!")
 	}
+	calculator.result /= number
 }

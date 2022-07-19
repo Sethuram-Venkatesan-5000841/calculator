@@ -139,4 +139,46 @@ func TestDivide(t *testing.T) {
 			calculator.Divide(0.0)
 		})
 	})
+
+	t.Run("should return 5.0 for number 2.0 when the result is 10.0", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Add(10)
+		calculator.Divide(2.0)
+		assert.Equal(t, 5.0, calculator.result)
+	})
+
+	t.Run("should return -5.0 for number 2.0 when the result is -10.0", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Subtract(10)
+		calculator.Divide(2.0)
+		assert.Equal(t, -5.0, calculator.result)
+	})
+
+	t.Run("should return 5.0 for number -2.0 when the result is -10.0", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Subtract(10)
+		calculator.Divide(-2.0)
+		assert.Equal(t, 5.0, calculator.result)
+	})
+
+	t.Run("should return 2.5 for number 2.0 when the result is 5.0", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Add(5)
+		calculator.Divide(2.0)
+		assert.Equal(t, 2.5, calculator.result)
+	})
+
+	t.Run("should return 2.0 for number 2.5 when the result is 5.0", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Add(5)
+		calculator.Divide(2.5)
+		assert.Equal(t, 2.0, calculator.result)
+	})
+
+	t.Run("should return 0.5 for number 5.0 when the result is 2.5", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Add(2.5)
+		calculator.Divide(5.0)
+		assert.Equal(t, 0.5, calculator.result)
+	})
 }
