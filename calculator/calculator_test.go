@@ -88,3 +88,11 @@ func TestSubtract(t *testing.T) {
 		assert.Equal(t, 6.5, calculator.result)
 	})
 }
+
+func TestMultiply(t *testing.T) {
+	t.Run("should return 0.0 for number 0.0 when the result is 0.0", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Multiply(0)
+		assert.Equal(t, 0.0, calculator.result)
+	})
+}
