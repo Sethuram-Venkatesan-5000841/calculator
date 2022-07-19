@@ -7,3 +7,7 @@ type Calculator struct {
 func NewCalculator() Calculator {
 	return Calculator{}
 }
+
+func (calculator *Calculator) Add(number float64) {
+
+}
