@@ -19,3 +19,9 @@ func (calculator *Calculator) Subtract(number float64) {
 func (calculator *Calculator) Multiply(number float64) {
 	calculator.result *= number
 }
+
+func (calculator *Calculator) Divide(number float64) {
+	if number == 0 {
+		panic("Cannot divide by 0!")
+	}
+}
