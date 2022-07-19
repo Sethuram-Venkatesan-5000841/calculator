@@ -61,3 +61,11 @@ func TestAdd(t *testing.T) {
 		assert.Equal(t, -11.0, calculator.result)
 	})
 }
+
+func TestSubtract(t *testing.T) {
+	t.Run("should return 0.0 for number 0.0 when the result is 0.0", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Subtract(0)
+		assert.Equal(t, 0.0, calculator.result)
+	})
+}

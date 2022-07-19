@@ -11,3 +11,7 @@ func NewCalculator() Calculator {
 func (calculator *Calculator) Add(number float64) {
 	calculator.result += number
 }
+
+func (calculator *Calculator) Subtract(number float64) {
+
+}
