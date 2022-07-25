@@ -188,6 +188,19 @@ func TestCancel(t *testing.T) {
 		calculator := NewCalculator()
 		calculator.Add(50)
 		calculator.Cancel()
-		assert.Equal(t, 0, calculator.result)
+		assert.Equal(t, 0.0, calculator.result)
+	})
+}
+
+func TestGetResults(t *testing.T) {
+	t.Run("should return 0 when the calculator has the result as 0", func(t *testing.T) {
+		calculator := NewCalculator()
+		assert.Equal(t, 0.0, calculator.GetResults())
+	})
+
+	t.Run("should return 500 when the calculator has the result as 500", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Add(500)
+		assert.Equal(t, 500.0, calculator.GetResults())
 	})
 }
