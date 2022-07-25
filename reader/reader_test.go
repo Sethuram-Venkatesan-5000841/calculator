@@ -22,4 +22,11 @@ func TestRead(t *testing.T) {
 		reader = strings.NewReader("multiply 10")
 		assert.Equal(t, "multiply 10", Read(reader))
 	})
+
+	t.Run("should exit the program when 'exit' command is passed by the user", func(t *testing.T) {
+		reader = strings.NewReader("exit")
+		assert.Panics(t, func() {
+			Read(reader)
+		})
+	})
 }

@@ -1,0 +1,19 @@
+mode: atomic
+calculator/handler/handler.go:9.92,17.2 2 0
+calculator/parser/parser.go:11.25,13.2 1 2
+calculator/parser/parser.go:15.61,16.17 1 8
+calculator/parser/parser.go:20.2,22.22 2 7
+calculator/parser/parser.go:26.2,27.16 2 5
+calculator/parser/parser.go:31.2,31.27 1 5
+calculator/parser/parser.go:16.17,17.37 1 1
+calculator/parser/parser.go:22.22,23.25 1 2
+calculator/parser/parser.go:27.16,28.27 1 0
+calculator/reader/reader.go:8.36,12.2 3 3
+calculator/calculator/calculator.go:14.34,16.2 1 26
+calculator/calculator/calculator.go:18.51,20.2 1 20
+calculator/calculator/calculator.go:22.56,24.2 1 6
+calculator/calculator/calculator.go:26.56,28.2 1 6
+calculator/calculator/calculator.go:30.54,31.17 1 7
+calculator/calculator/calculator.go:34.2,34.29 1 6
+calculator/calculator/calculator.go:31.17,32.31 1 1
+calculator/calculator/calculator.go:36.52,38.2 1 0

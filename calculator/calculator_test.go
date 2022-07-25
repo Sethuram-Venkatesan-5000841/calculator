@@ -182,3 +182,12 @@ func TestDivide(t *testing.T) {
 		assert.Equal(t, 0.5, calculator.result)
 	})
 }
+
+func TestCancel(t *testing.T) {
+	t.Run("should return 0 when user enters cancel button", func(t *testing.T) {
+		calculator := NewCalculator()
+		calculator.Add(50)
+		calculator.Cancel()
+		assert.Equal(t, 0, calculator.result)
+	})
+}

@@ -6,7 +6,6 @@ import (
 )
 
 type Parser struct {
-	tokens []string
 }
 
 func NewParser() Parser {
@@ -18,16 +17,16 @@ func (parser *Parser) Parse(input string) (string, float64) {
 		panic("cannot parse empty string")
 	}
 
-	parser.tokens = strings.Split(input, " ")
+	tokens := strings.Split(input, " ")
 
-	if len(parser.tokens) != 2 {
+	if len(tokens) != 2 {
 		panic("invalid input")
 	}
 
-	operand, err := strconv.ParseFloat(parser.tokens[1], 64)
+	operand, err := strconv.ParseFloat(tokens[1], 64)
 	if err != nil {
 		panic("invalid operand")
 	}
 
-	return parser.tokens[0], operand
+	return tokens[0], operand
 }
