@@ -1,5 +1,7 @@
 package calculator
 
+import "os"
+
 type ICalculator interface {
 	Add(number float64)
 	Subtract(number float64)
@@ -42,4 +44,8 @@ func (calculator *Calculator) GetResults() float64 {
 
 func (calculator *Calculator) Cancel() {
 	calculator.result = 0
+}
+
+func (calculator *Calculator) Exit() {
+	os.Exit(0)
 }
